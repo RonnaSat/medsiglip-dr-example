@@ -32,10 +32,26 @@ The model classifies images into 5 categories:
 Install the required packages:
 
 ```bash
-pip install pillow transformers torch
+pip install pillow transformers torch huggingface_hub ipywidgets
 ```
 
 For Apple Silicon Macs, PyTorch will automatically use Metal Performance Shaders (MPS) for GPU acceleration.
+
+## Authentication
+
+The MedSigLIP model requires Hugging Face authentication. Login via CLI before running the notebook:
+
+```bash
+huggingface-cli login
+```
+
+You'll need to:
+
+1. Create a free account at [Hugging Face](https://huggingface.co)
+2. Generate an access token at [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) with "Read" permissions
+3. Enter the token when prompted by the CLI command
+
+**Note**: The model may be gated and require approval. If you encounter access issues, visit the [MedSigLIP model page](https://huggingface.co/google/medsiglip-448) and request access.
 
 ## Usage
 
